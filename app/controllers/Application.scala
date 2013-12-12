@@ -15,5 +15,4 @@ object Application extends Controller {
   def sayHello(name:String, age:Long) = Action{request =>
     Ok(Json.obj("type" ->"AAA", "name"->name, "age"->age))
   }
-
 }

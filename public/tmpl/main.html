@@ -1,0 +1,24 @@
+    <nav id="listGroup">
+      <div class="input-group" ng-controller="ListGroupCtrl">
+        <select class="form-control" ng-model="listGroup" ng-options="g.name for g in listGroups"></select>
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-primary">+</button>
+        </span>
+      </div>
+    </nav>
+    <article id="todoList" ng-controller="TodoListCtrl">
+      <table class="table-hover">
+        <tbody>
+          <tr ng-repeat="task in tasks">
+            <td><input type="checkbox" ng-model="task.done"></td>
+            <td>{{task.title}}</td>
+            <td>
+              <a href="#">編集</a>/<a href="#">削除</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="addNew">
+        <button type="button" class="btn btn-primary" ng-click="addNewTask()">新規タスク</button>
+      </div>
+    </article>
